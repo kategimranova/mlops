@@ -1,5 +1,15 @@
 Домашнее задание 1. Rest API (based on Fast API) for Titanic Problem (Binary classification). 
-Description about data: https://www.kaggle.com/competitions/titanic/data
+(подробное описание данных и датасета: https://www.kaggle.com/competitions/titanic/data)
+Для бинарной классификации используются 2 типа моделей: KNN и Logistic Regression.
+Признаки, которые подаются на вход модели: 
+Pclass (Класс билета) - целое число от 1 до 3
+Sex (пол) - 'male'/'female'
+Age (возраст) - целое число от 1 до 101
+Fare (транспортные расходы) - float число
+Embarked (порт) - строковые значения из 'C', 'Q', 'S'
+Relative (количество родственников на борту) - целое неотрицательное число
+
+Swagger документация: http://127.0.0.1:8000/docs
 
 run: 
 ```bash
