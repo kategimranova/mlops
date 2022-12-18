@@ -76,6 +76,7 @@ def train_logreg(params: LogRegParameters):
 
 @app.post('/predict/knn', response_model=Output)
 def model_predict_knn(input: Input):
+    '''Получение предсказания по модели KNN'''
     label = knn_model.predict_(input)[0]
 
     if label == 1:
