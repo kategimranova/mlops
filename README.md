@@ -4,7 +4,7 @@
 
 (подробное описание данных и датасета: https://www.kaggle.com/competitions/titanic/data)
 
-Для бинарной классификации используются 2 типа моделей: KNN и Logistic Regression.
+Для бинарной классификации используются 2 типа моделей: *KNN* и *Logistic Regression*.
 
 В *KNN* можно регулировать параметр *n_neighbors* (количество соседей, натуральное число), в *Logistic Regression* - *penalty* (тип регуляризации: l1, l2 или none)
 
