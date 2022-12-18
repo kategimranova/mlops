@@ -13,7 +13,11 @@ class KnnModel:
     ...
     Attributes
     ----------
-    Methods
+    Methods:
+    train: training model
+    predict_: predicting result
+    _set_model_path: setting path to a model
+    get_parameters: getting parameters of a KNN model (n_neighbors)
     '''
     def __init__(self, n_neighbors=3):
         self.n_neighbors = n_neighbors
@@ -64,7 +68,11 @@ class LogRegModel:
     ...
     Attributes
     ----------
-    Methods
+    Methods:
+    train: training model
+    predict_: predicting result
+    _set_model_path: setting path to a model
+    get_parameters: getting parameters of a Logistic regression model (penalty)
     '''
     def __init__(self, penalty='l2'):
         self.penalty = penalty
