@@ -89,7 +89,7 @@ def train_knn(params: KnnParameters):
 
 @app.post('/train/logreg')
 def train_logreg(params: LogRegParameters):
-    '''Обучение модели Logisctic Regression,
+    '''Обучение модели Logistic Regression,
     можно задать гиперпараметр penalty
     '''
     global logreg_model
