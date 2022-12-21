@@ -33,3 +33,78 @@ uvicorn api:app
 ```
 Swagger документация: http://127.0.0.1:8000/docs
 
+## Запросы
+*Получение доступных для обучения и тестирования моделей*:
+```bash
+curl -X GET http://localhost:8000/available_models
+```
+*Обучение KNN модели с параметром n_neighbors (в данном случае 3) *
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:8000/train/knn' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "n_neighbors": 3
+}'
+```
+
+*Обучение LogReg модели с параметром penalty (в данном случае l1) *
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:8000/train/logreg' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "penalty": "l1"
+}'
+```
+*Предсказание KNN модели*
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:8000/predict/knn' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "Pclass": 3,
+  "Sex": "male",
+  "Age": 50,
+  "Fare": 1,
+  "Embarked": "C",
+  "Relative": 1
+}'
+```
+*Предсказание LogReg модели*
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:8000/predict/logreg' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "Pclass": 2,
+  "Sex": "male",
+  "Age": 80,
+  "Fare": 2,
+  "Embarked": "C",
+  "Relative": 2
+}'
+```
+Удаление модели (model_name = "KNN" или "LogisticRegression")
+```bash
+curl -X 'DELETE' \
+  'http://127.0.0.1:8000/delete_model' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "model_name": "KNN"
+}'
+```
+
+*Общая информация*
+```bash
+curl -X GET http://localhost:8000/
+```
+
+
+
+
