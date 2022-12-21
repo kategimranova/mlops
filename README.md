@@ -38,7 +38,7 @@ Swagger документация: http://127.0.0.1:8000/docs
 ```bash
 curl -X GET http://localhost:8000/available_models
 ```
-*Обучение KNN модели с параметром n_neighbors (в данном случае 3) *
+*Обучение KNN модели с параметром n_neighbors (в данном случае 3)*
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:8000/train/knn' \
@@ -49,7 +49,7 @@ curl -X 'POST' \
 }'
 ```
 
-*Обучение LogReg модели с параметром penalty (в данном случае l1) *
+*Обучение LogReg модели с параметром penalty (в данном случае l1)*
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:8000/train/logreg' \
@@ -89,7 +89,7 @@ curl -X 'POST' \
   "Relative": 2
 }'
 ```
-Удаление модели (model_name = "KNN" или "LogisticRegression")
+*Удаление модели (model_name = "KNN" или "LogisticRegression")*
 ```bash
 curl -X 'DELETE' \
   'http://127.0.0.1:8000/delete_model' \
