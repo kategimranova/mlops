@@ -23,6 +23,15 @@
 
 *Relative* (количество родственников на борту) - целое неотрицательное число
 
+## Выходные параметры предсказания
+Dict-объект в виде
+{
+  "label": 0,
+  "prediction": "Not survived"
+}
+где label ∈ {0;1}, 
+prediction ∈ {"Not survived", "Survived"}
+
 ##  Запуск
 ```bash
 pip install virtualenv
