@@ -34,6 +34,7 @@ prediction ∈ {"Not survived", "Survived"}
 
 ##  Запуск
 ```bash
+cd ./mlops
 pip install virtualenv
 virtualenv venv
 source venv/bin/activate
