@@ -35,7 +35,7 @@ prediction ∈ {"Not survived", "Survived"}
 ##  Запуск
 ```bash
 pip install virtualenv
-virtualenv -p path_to_python venv
+virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 uvicorn api:app
